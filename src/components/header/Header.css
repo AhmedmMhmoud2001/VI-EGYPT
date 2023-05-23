@@ -1,0 +1,230 @@
+.header {
+    position: relative;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #232323;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+.topbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+}
+.topbar ul li {
+    list-style-type: none;
+    padding: 0px 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.8) ;
+    font-size: 15px;
+}
+.topbar ul li:last-child{
+    border-right: none ;
+}
+.topbar ul li a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding-bottom: 0px;
+}
+.topbar ul li a svg {
+    margin-right: 5px;
+}
+@media only screen and (max-width: 700px) {
+    .topbar{
+        display: none;
+    }
+}
+
+/* ================================================ */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px !important;
+    background: rgba(35, 35, 35, 0.6);
+}
+
+.bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 100px;
+    font-size: 20px;
+    text-align: left;
+}
+.navbar-left img { 
+    width: 120px;
+}
+.navbar-center .nav-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+.navbar-center .nav-link .link-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    color: blue;
+    ;
+    font-weight: 500;
+
+}
+
+/* .navbar-center .menu-dropdown{
+    display: none;
+} */
+
+.navbar-center .dropdown-toggle.btn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+}
+
+.navbar-center .dropdown-toggle.btn:hover {
+    color: blue;
+
+}
+
+/* navbar-right */
+.navbar-right ul {
+    display: flex;
+    /* align-items: end; */
+}
+
+.navbar-right ul li {
+    list-style-type: none;
+    padding-right: 5px;
+
+}
+
+.navbar-right ul li .dropdown-toggle.btn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+}
+
+.navbar-right ul li .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* ================================ */
+@media only screen and (max-width: 900px) {
+    .navbar {
+        background: #fff;
+    }
+    .navbar-left img { 
+        width: 60px;
+    }
+    .navbar-center {
+        display: none;
+    }
+
+    .navbar-right ul li .dropdown-toggle.btn {
+        display: none;
+    }
+
+    .bars {
+        display: block;
+    }
+    .navbar-right ul li .icons {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ============================= */
+
+
+
+
+#slidbar {
+    /* display: none; */
+    width: 300px;
+    background: #eeeeee;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    transition: all 0.5s ease-in-out;
+}
+
+#slidbar.visible {
+    /* display: block; */
+    left: 0;
+    opacity: 1;
+    /* Make the sidebar fully visible */
+}
+
+#slidbar .slidbar-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#slidbar .slidbar-nav-link li {
+    list-style-type: none;
+    margin-top: 15px;
+
+}
+
+#slidbar .slidbar-nav-link .close-navbar {
+    width: 250px;
+    text-align: right;
+    font-size: 30px;
+    background: #f5f4f4;
+}
+
+#slidbar .slidbar-nav-link .link-home {
+
+    padding: 0.375rem 0.75rem;
+    color: blue;
+    ;
+    font-weight: 500;
+    width: 250px;
+    text-align: left;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #b3adad;
+}
+
+#slidbar .slidbar-nav-link .dropdown-toggle.btn {
+    width: 250px;
+    text-align: left;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #b3adad;
+    margin-top: 15px;
+    font-weight: 500;
+
+}
+
+#slidbar .slidbar-nav-link .dropdown-menu {
+    margin-left: 150px;
+}
